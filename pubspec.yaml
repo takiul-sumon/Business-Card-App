@@ -30,6 +30,8 @@ environment:
 dependencies:
   flutter:
     sdk: flutter
+  intl: ^0.19.0
+  
 
 
   # The following adds the Cupertino Icons font to your application.
@@ -58,9 +60,9 @@ flutter:
   # the material Icons class.
   uses-material-design: true
 
-assets:
-  - /images/a_dot_burr.jpeg,
-
+  # To add assets to your application, add an assets section, like this:
+  assets:
+    - assets/less.jpg
 
   # An image asset can refer to one or more resolution-specific "variants", see
   # https://flutter.dev/assets-and-images/#resolution-aware
@@ -73,23 +75,23 @@ assets:
   # "family" key with the font family name, and a "fonts" key with a
   # list giving the asset and other descriptors for the font. For
   # example:
-  # fonts:
-  #   - family: Schyler
-  #     fonts:
-  #       - asset: fonts/Schyler-Regular.ttf
+  fonts:
+    - family: GreatVibes
+      fonts:
+        - asset: fonts/GreatVibes-Regular.ttf
+    - family: Head
+      fonts:
+        - asset: fonts/Poppins-Regular.ttf
   #       - asset: fonts/Schyler-Italic.ttf
   #         style: italic
   #   - family: Trajan Pro
-fonts:
-  - family: GreatVibes
-    fonts:
-      - asset: assets/fonts/GreatVibes-Regular.ttf
-        weight: 700
-
-  - family: Kolak
-    fonts:
-      - asset: assets/fonts/KOLAK.ttf
-
-  #
+  #     fonts:
+  #       - asset: fonts/TrajanPro.ttf
+  #       - asset: fonts/TrajanPro_Bold.ttf
+  #         weight: 700
+  #   - family: Heading 
+  #     fonts:
+  #       - assets: assets/fonts/HeadingNowTrial-06Bold.ttf
+  
   # For details regarding fonts from package dependencies,
   # see https://flutter.dev/custom-fonts/#from-packages
