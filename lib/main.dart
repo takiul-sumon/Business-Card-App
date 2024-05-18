@@ -30,11 +30,13 @@ class _MyappState extends State<Myapp> {
         // backgroundColor: Colors.blue,
 
         body: Container(
+          alignment: Alignment.center,
           color: Colors.cyan,
           child: Center(
             child: Column(
               mainAxisAlignment: MainAxisAlignment.center,
-              crossAxisAlignment: CrossAxisAlignment.center,
+              // crossAxisAlignment: CrossAxisAlignment.center,
+
               children: [
                 // CircleAvatar(child: Image.asset('assets/images/less.jpg'),maxRadius: 20,)
                 //  Image.asset('/images/less.jpg',)
@@ -66,8 +68,11 @@ class _MyappState extends State<Myapp> {
                 ),
 
                 SizedBox(
-                  height: 10,
-                ),
+                    height: 10,
+                    width: 130,
+                    child: Divider(
+                      color: Colors.white,
+                    )),
                 // Container(
                 //     height: 50,
                 //     width: 250,
@@ -77,23 +82,58 @@ class _MyappState extends State<Myapp> {
                 //   title: Text("+880580626965",style: TextStyle(color: Colors.white)),
                 //   selectedColor: Colors.deepOrangeAccent,
                 // )
-
+                SizedBox(height: 5),
                 Container(
-                  width: 200,
-                  decoration: BoxDecoration(
-                      borderRadius: BorderRadius.circular(10),
-                      color: Colors.lightBlue),
-                  //  color: Colors.teal,
+                  width: 300,
+                  color: Colors.amberAccent,
+                  // decoration: BoxDecoration(
+                  //     borderRadius: BorderRadius.circular(10),
+                  //     color: Colors.lightBlue),
+                  margin: EdgeInsets.symmetric(vertical: 0, horizontal: 5),
+                  padding: EdgeInsets.all(10),
                   child: Row(
                     mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                     children: [
                       FittedBox(
                           child: Icon(
                         Icons.phone,
-                        color: Colors.white,
+                        color: Colors.blueGrey,
                       )),
                       Text("+880580626965",
-                          style: TextStyle(color: Colors.white))
+                          style: TextStyle(color: Colors.white)),
+                    ],
+                  ),
+                ),
+                SizedBox(
+                  height: 10,
+                ),
+                Container(
+                  width: 300,
+                  // height: 40,
+                  color: Colors.amberAccent,
+                  // decoration: BoxDecoration(
+                  //     borderRadius: BorderRadius.circular(10),
+                  //     color: Colors.lightBlue),
+                  margin: EdgeInsets.symmetric(vertical: 0, horizontal: 5),
+                  padding: EdgeInsets.all(10),
+
+                  child: Row(
+                    mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+                    children: [
+                      FittedBox(
+                          child: Icon(
+                        Icons.mail,
+                        color: Colors.blueGrey,
+                      )),
+                      FittedBox(
+                        child: Text(
+                          "Takiulislam20@gmail.com",
+                          style: TextStyle(
+                            fontSize: 9,
+                            color: Colors.white,
+                          ),
+                        ),
+                      )
                     ],
                   ),
                 )
