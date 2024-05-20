@@ -1,6 +1,5 @@
-import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
-import 'package:flutter/widgets.dart';
+import 'package:url_launcher/link.dart';
 
 void main() {
   runApp(Myapp());
@@ -40,7 +39,43 @@ class _MyappState extends State<Myapp> {
               children: [
                 // CircleAvatar(child: Image.asset('assets/images/less.jpg'),maxRadius: 20,)
                 //  Image.asset('/images/less.jpg',)
+                Link(
+                  target: LinkTarget.blank,
+                  uri: Uri.parse("http://www.facebook.com/TakiuliSumon"),
+                  builder: (context, followLink) => ElevatedButton(
+                      onPressed: followLink,
+                      child: Container(
+                        width: 300,
+                        // height: 40,
+                        color: Colors.amberAccent,
+                        // decoration: BoxDecoration(
+                        //     borderRadius: BorderRadius.circular(10),
+                        //     color: Colors.lightBlue),
+                        margin:
+                            EdgeInsets.symmetric(vertical: 0, horizontal: 5),
+                        padding: EdgeInsets.all(10),
 
+                        child: Row(
+                          mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+                          children: [
+                            FittedBox(
+                                child: Icon(
+                              Icons.mail,
+                              color: Colors.blueGrey,
+                            )),
+                            FittedBox(
+                              child: Text(
+                                "Takiulislam20@gmail.com",
+                                style: TextStyle(
+                                  fontSize: 9,
+                                  color: Colors.white,
+                                ),
+                              ),
+                            )
+                          ],
+                        ),
+                      )),
+                ),
                 CircleAvatar(
                   backgroundImage: AssetImage('assets/less.jpg'),
                   maxRadius: 70,
